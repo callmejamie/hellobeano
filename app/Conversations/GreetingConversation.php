@@ -70,9 +70,9 @@ class GreetingConversation extends Conversation
         $this->bot->reply(GenericTemplate::create()
         	->addImageAspectRatio(GenericTemplate::RATIO_SQUARE)
         	->addElements([
-        		Element::create('BotMan Documentation')
-        			->subtitle('All about BotMan')
-        			->image('http://botman.io/img/botman-body.png')
+        		Element::create('Hellobeano Registration')
+        			->subtitle('Register now for your early access and get 10% off your first year\'s subscription')
+        			//->image(env('APP_URL', 'http://hellobeano.com') . '/img/hellobeano-website.png')
         			->addButton(ElementButton::create('visit')->url('http://hellobeano.com/register.html')),
         	])
         );
@@ -112,7 +112,7 @@ class GreetingConversation extends Conversation
     
     public function thanksForStoppingBy()
     {
-        $this->say('Ok, I got it. Thank you so much for stopping by then.');
+        $this->say('Ok. Thank you so much for stopping by then.');
         $this->bot->typesAndWaits(1);
         $this->say('Have a good day!');
         
