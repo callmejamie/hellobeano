@@ -56,6 +56,6 @@ class User extends SparkUser
     
     public function getDateFormat()
     {
-        return 'Y-m-d H:i:s';
+        return env('DATE_FORMAT', 'Y-m-d H:i:s.000');
     }
 }
